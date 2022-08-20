@@ -89,5 +89,5 @@ connectToDatabase();
 
   // Modified server startup
   await new Promise((resolve) => httpServer.listen({ port: PORT }, resolve));
-  console.log(`Server ready at http://localhost:4000${server.graphqlPath}`);
+  console.log(`Server ready at http://localhost:${PORT}${server.graphqlPath}`);
 })(typeDefs, resolvers);
