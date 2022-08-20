@@ -1,12 +1,17 @@
 import React from 'react'
-import { Routes } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
+import AuthPage from './components/auth/views/AuthPage'
+import Base from './components/base/views/Base'
 
 const app = () => {
-  console.log(process.env.ENVIRONMENT)
+  console.log('process.env.ENVIRONMENT', process.env.ENVIRONMENT)
   return (
-    <div>
-      <Routes></Routes>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Base />} />
+        <Route path="/auth" element={<AuthPage />} />
+      </Routes>
+    </>
   )
 }
 
